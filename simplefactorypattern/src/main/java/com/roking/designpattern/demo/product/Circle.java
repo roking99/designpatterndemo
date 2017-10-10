@@ -13,11 +13,11 @@ package com.roking.designpattern.demo.product;
 public class Circle extends AbstractAngular {
     @Override
     public void draw() {
-
+        System.out.println("画圆形");
     }
 
     @Override
     public void erase() {
-
+        System.out.println("擦除圆形");
     }
 }
