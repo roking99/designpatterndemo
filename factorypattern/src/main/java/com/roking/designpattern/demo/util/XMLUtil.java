@@ -44,7 +44,8 @@ public class XMLUtil {
         AbstractReaderFactory factory;
         DocumentBuilderFactory dFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder documentBuilder = dFactory.newDocumentBuilder();
-        Document doc = documentBuilder.parse("com/roking/designpattern/demo/config/config.xml");
+        Document doc = documentBuilder.parse("factorypattern/src/main/java/com/roking/designpattern/demo/config" +
+                "/config.xml");
         NodeList nodeList = doc.getElementsByTagName("className");
         Node classNameNode = nodeList.item(0).getFirstChild();
         Class<?> aClass = null;

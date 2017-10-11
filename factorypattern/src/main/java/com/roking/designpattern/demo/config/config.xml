@@ -1,5 +1,7 @@
 <?xml version="1.0"?>
 <config>
     <!--这里写类的全路径-->
-    <className>com.roking.designpattern.demo.factory.JpgImgReaderFactory</className>
+    <!--<className>com.roking.designpattern.demo.factory.JpgImgReaderFactory</className>-->
+    <!--<className>com.roking.designpattern.demo.factory.PngImgReaderFactory</className>-->
+    <className>com.roking.designpattern.demo.factory.ExtendsImgReaderFactory</className>
 </config>
