@@ -22,6 +22,10 @@ public class FactoryMethodClient {
         //AbstractReaderFactory readerFactory= XMLUtil.getBean("PngImgReaderFactory");
         //AbstractReaderFactory readerFactory= XMLUtil.getBean("ExtendsImgReaderFactory");
         AbstractReaderFactory readerFactory= XMLUtil.getBean();
+        //重载 带String类型参数的 方法
+        //readerFactory.readImg("userName;password");
+        //重载 带Object类型参数的 方法
+        //readerFactory.readImg("object");
         readerFactory.readImg();
     }
 }

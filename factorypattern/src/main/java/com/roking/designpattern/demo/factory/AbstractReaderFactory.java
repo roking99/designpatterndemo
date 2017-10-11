@@ -16,8 +16,24 @@ public abstract class AbstractReaderFactory {
 
     public abstract AbstractImgReader createImgReader();
 
+    public abstract AbstractImgReader createImgReader(String args);
+
+    public abstract AbstractImgReader createImgReader(Object obj);
+
+
+
     public void readImg(){
         AbstractImgReader imgReader = this.createImgReader();
+        imgReader.readImg();
+    }
+
+    public void readImg(String args){
+        AbstractImgReader imgReader = this.createImgReader(args);
+        imgReader.readImg();
+    }
+
+    public void readImg(Object obj){
+        AbstractImgReader imgReader = this.createImgReader(obj);
         imgReader.readImg();
     }
 }

@@ -17,4 +17,14 @@ public class PngImgReaderFactory extends AbstractReaderFactory {
     public AbstractImgReader createImgReader() {
         return new PngImgReader();
     }
+
+    @Override
+    public AbstractImgReader createImgReader(String args) {
+        return null;
+    }
+
+    @Override
+    public AbstractImgReader createImgReader(Object obj) {
+        return null;
+    }
 }

@@ -19,4 +19,22 @@ public class ExtendsImgReaderFactory extends AbstractReaderFactory {
         //需要扩展时,得增加这个具体工厂类和具体的产品类
         return new ExtendsImgReader();
     }
+
+    @Override
+    public AbstractImgReader createImgReader(String args) {
+        ExtendsImgReader extendsImgReader=new ExtendsImgReader();
+        //args 可以是创建解析器需要的各种客户端传来的参数
+        extendsImgReader.setUserName("abc");
+        extendsImgReader.setPassWord("123");
+        return extendsImgReader;
+    }
+
+    @Override
+    public AbstractImgReader createImgReader(Object obj) {
+        ExtendsImgReader extendsImgReader=new ExtendsImgReader();
+        //obj 可以是创建解析器需要的各种客户端传来的参数
+        extendsImgReader.setUserName("def");
+        extendsImgReader.setPassWord("456");
+        return extendsImgReader;
+    }
 }
