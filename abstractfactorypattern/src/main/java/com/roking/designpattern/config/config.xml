@@ -1,0 +1,4 @@
+<?xml version="1.0" ?>
+<config>
+    <className>com.roking.designpattern.factory.AndroidGameFactory</className>
+</config>
