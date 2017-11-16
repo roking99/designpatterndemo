@@ -1,4 +1,4 @@
-package com.roking.designpattern.implement.texttype;
+package com.roking.designpattern.bridgepattern.texttype;
 
 /**
  * Title:</br>
@@ -11,4 +11,9 @@ package com.roking.designpattern.implement.texttype;
  * @date 2017/11/15.
  */
 public class XmlTextConverter extends AbstractTextConverter {
+    @Override
+    public void convertAndInstance(String data){
+        System.out.println("  convert to xml"+data);
+        dataSource.create(data);
+    }
 }
