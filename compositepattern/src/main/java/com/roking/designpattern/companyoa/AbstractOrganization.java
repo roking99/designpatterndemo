@@ -14,9 +14,9 @@ package com.roking.designpattern.companyoa;
 public interface AbstractOrganization {
     /**
      * 通知
-     * @param department
+     * @param noticeContent
      */
-    void notice(String department);
+    void notice(String noticeContent);
 
     /**
      * 获取部门

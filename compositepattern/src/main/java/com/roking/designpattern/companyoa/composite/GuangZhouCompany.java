@@ -16,11 +16,18 @@ import java.util.List;
  * @date 2017/11/16.
  */
 public class GuangZhouCompany implements AbstractOrganization {
+    private String name;
+
+    public GuangZhouCompany(String name) {
+        this.name = name;
+    }
+
     private List<AbstractOrganization> departmentList = new ArrayList<>();
     @Override
-    public void notice(String companyName) {
+    public void notice(String noticeContent) {
+        System.out.println("通知："+name+"--------");
         for (AbstractOrganization ao :departmentList) {
-            ao.notice("广州分公司");
+            System.out.print("\t");ao.notice(noticeContent);
         }
     }
 

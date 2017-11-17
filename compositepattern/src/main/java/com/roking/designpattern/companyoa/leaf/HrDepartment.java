@@ -13,9 +13,15 @@ import com.roking.designpattern.companyoa.AbstractOrganization;
  * @date 2017/11/16.
  */
 public class HrDepartment implements AbstractOrganization {
+    private String name;
+
+    public HrDepartment(String name) {
+        this.name = name;
+    }
+
     @Override
-    public void notice(String companyName) {
-        System.out.println(" 通知"+companyName+"人力部门 ");
+    public void notice(String noticeContent) {
+        System.out.println("通知"+name+":"+noticeContent);
     }
 
     @Override
