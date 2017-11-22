@@ -40,4 +40,4 @@ Demo介绍：
     图形时，提示一个UnSupportedShapeException。
  
 结构图
-![](/simplefactorypattern/src/main/static/structure.jpg)
+![](/src/main/static/structure.jpg)

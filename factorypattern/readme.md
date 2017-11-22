@@ -43,4 +43,4 @@ demo介绍：
     器用于读取GIF格式的图片、JPG图片读取器用于读取JPG格式的图片。需充分考虑系统的灵活性和可扩展性。
 
 结构图
-![](factorypattern/src/main/static/structure.jpg)
+![](/src/main/static/structure.jpg)
