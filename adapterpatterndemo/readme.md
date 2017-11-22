@@ -47,4 +47,5 @@ demo介绍
     操作类。为了提高开发效率，现需要重用已有的加密算法，这些算法封装在一些由第三方提供的类中，有些甚至没有源代码。试使用适配器
     模式设计该加密模块，实现在不修改现有类的基础上重用第三方加密方法。
     
-![](/adapterpatterndemo/src/main/static/structure.png)
+结构图    
+![](/adapterpatterndemo/src/main/static/structure.jpg)
