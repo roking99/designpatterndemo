@@ -46,4 +46,4 @@ demo介绍
      将文件解析功能和文件加密功能通过外观模式进行整合。减少客户端代码。
     
 结构图
-![]("/facadepattern/src/main/static/structure.jpg")
+![](/facadepattern/src/main/static/structure.jpg)
