@@ -56,3 +56,4 @@ demo介绍
        享元模式设计该文档编辑器。
 
 结构图
+![](/flyweightpattern/src/main/static/structure.jpg)
