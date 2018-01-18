@@ -73,8 +73,12 @@ demo
     正的图片，界面效果如图15-7所示。试使用虚拟代理模式设计并实现该图片查看器
     
     3、jdk代理demo、cglib代理demo
+    
 代理模式结构图
+
 ![](/proxypattern/src/main/static/structure.jpg)
+
+
 顺便理解下jdk动态代理和cglib动态代理：
     
        动态代理相比于静态代理最大的不同在于，动态代理的每一个功能调用都由InvocationHandler(jdk)/MethodInterceptor(cglib)
