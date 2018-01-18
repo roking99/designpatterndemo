@@ -73,11 +73,18 @@ demo
     正的图片，界面效果如图15-7所示。试使用虚拟代理模式设计并实现该图片查看器
     
     3、jdk代理demo、cglib代理demo
-结构图
+代理模式结构图
 ![](/proxypattern/src/main/static/structure.jpg)
 顺便理解下jdk动态代理和cglib动态代理：
     
-    1、jdk动态代理：通过接口配合反射实现代理，执行如下步骤：
+       动态代理相比于静态代理最大的不同在于，动态代理的每一个功能调用都由InvocationHandler(jdk)/MethodInterceptor(cglib)
+    来完成，外界对Proxy角色中的每一个方法的调用，Proxy角色都会交给InvocationHandler(jdk)/MethodInterceptor(cglib)来处理，
+    而InvocationHandler(jdk)/MethodInterceptor(cglib)则调用具体对象角色的方法。见结构图：
+     
+    动态代理模式结构图
+![](/proxypattern/src/main/static/dynamicstructure.jpg)
+    
+    1、jdk动态代理：通过接口配合反射实现代理，代理类需要和真实对象实现完全相同的功能，执行如下步骤：
             
             1.   获取 RealSubject上的所有接口列表；
             2.   确定要生成的代理类的类名，默认为：com.sun.proxy.$ProxyXXXX ；
@@ -86,7 +93,8 @@ demo
             5.   创建InvocationHandler 实例handler，用来处理Proxy所有方法调用；
             6.   Proxy 的class对象 以创建的handler对象为参数，实例化一个proxy对象
         
-    2、cglib动态代理：通过类继承实现代理，将真实主题作为代理主题的父类，将父类所有非final的方法进行代理增强,执行如下步骤
+    2、cglib动态代理：通过类继承实现代理，将真实主题作为代理主题的父类，将父类所有可继承的方法进行(非final)代理增强,执行
+    如下步骤:
     
             1.   查找A上的所有非final 的public类型的方法定义；
             2.   将这些方法的定义转换成字节码；
@@ -95,4 +103,5 @@ demo
                   InvocationHandler的功能和角色是一样的）
             
      动态代理好文：http://blog.csdn.net/luanlouis/article/details/24589193
+     
 
