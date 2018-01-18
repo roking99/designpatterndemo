@@ -4,6 +4,10 @@ import com.roking.designpattern.dynamicproxydemo.cglibproxy.realsubject.TelPhone
 import com.roking.designpattern.dynamicproxydemo.jdkproxy.ProxyUtil;
 import net.sf.cglib.proxy.Callback;
 import net.sf.cglib.proxy.Enhancer;
+import sun.misc.ProxyGenerator;
+
+import java.io.FileOutputStream;
+import java.io.IOException;
 
 /**
  * Title:cglib 动态代理
@@ -20,13 +24,32 @@ import net.sf.cglib.proxy.Enhancer;
 public class CglibProxyClient {
 
     public static void main(String[] args) {
+        TelPhone telPhone=new TelPhone();
         MethodIntercetperImpl tel=new MethodIntercetperImpl();
         Enhancer enhancer=new Enhancer();
-        enhancer.setSuperclass(TelPhone.class);
+        enhancer.setSuperclass(telPhone.getClass());
         enhancer.setCallback(tel);
-        TelPhone o = (TelPhone)enhancer.create();
-        o.call();
-        o.playMusic();
-        ProxyUtil.generateClassFile(o.getClass(),"$telPhone");
+        Object o = enhancer.create();
+        byte[] classFile = ProxyGenerator.generateProxyClass("$proxy4", new Class[]{o.getClass()});
+        FileOutputStream out = null;
+
+        try {
+            //保留到硬盘中
+            out = new FileOutputStream("proxypattern/target/classes/com/roking/designpattern/dynamicproxydemo" +
+                    "/cglibproxy/realsubject/" + "abc" + ".class");
+            out.write(classFile);
+            out.flush();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                out.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        //ProxyUtil.generateClassFile(enhancer.createClass(),"$telProxy");
+        //o.call();
+        //o.playMusic();
     }
 }
