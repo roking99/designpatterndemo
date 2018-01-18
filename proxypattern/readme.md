@@ -106,6 +106,7 @@ demo
             4.   实现 MethodInterceptor接口，用来处理 对代理类上所有方法的请求（这个接口和JDK动态代理
                   InvocationHandler的功能和角色是一样的）
             
-     动态代理好文：![](http://blog.csdn.net/luanlouis/article/details/24589193)
+动态代理好文：
+![](http://blog.csdn.net/luanlouis/article/details/24589193)
      
 
